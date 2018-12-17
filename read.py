@@ -23,9 +23,18 @@ print('留言平均長度為: ', sum_len / len(data))
 # 清單的篩選
 new = []
 for d in data: # for loop的意思就是把清單中的東西一個一個拿出來
-	if len(d) <100:
+	if len(d) <100: # 是非題(會算成True/False)
 		new.append(d)
 print('一共有:', len(new), '筆留言長度小於100')
 print(new[0])
 print('---------------')
 print(new[1])
+
+good = []
+for d in data: # for loop的意思就是把清單中的東西一個一個拿出來
+	if 'good' in d: # 是非題(會算成True/False)
+		good.append(d)
+# 'a' in 'abc' -> True
+# 'e' in 'abc' -> False
+print('一共有:', len(good), '筆留言提到good')
+print(good[0])
